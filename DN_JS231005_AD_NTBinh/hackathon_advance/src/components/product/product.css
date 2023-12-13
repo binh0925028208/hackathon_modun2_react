@@ -1,0 +1,131 @@
+.products {
+    position: relative;
+    background-image: linear-gradient(to right, violet, white, rgb(84, 38, 112));
+    height: 100vh;
+
+}
+
+.productCart {
+    background-color: rgb(55, 55, 55);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    font-size: 50px;
+    gap: 10px;
+}
+
+.cartBtn {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 50px;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    color: white;
+}
+
+.productBackground {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px 20px;
+}
+
+.productDetail {
+    width: 250px;
+    height: 400px;
+    outline: none;
+    border: none;
+    position: relative;
+    overflow-y: hidden;
+    border-radius: 10px;
+    margin-top: 100px;
+}
+
+.productDetail img {
+    width: 100%;
+    height: 100%;
+    background-color: #040404;
+}
+
+.productDecs {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 4;
+}
+
+.productInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    background-color: rgb(56, 56, 56);
+    gap: 10px;
+    padding: 10px 10px;
+    border-radius: 10px;
+    transform: translateY(115px);
+}
+
+.productPriceAndBtn {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.productBtn {
+    display: flex;
+    gap: 20px;
+}
+
+.productBtn p {
+    transform: translateY(-2px);
+}
+
+.productBtn button {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: white;
+}
+
+.productBtn button:hover {
+    background-color: #ddd;
+    border-radius: 50%;
+    color: black;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.productDetail:hover .productInfo {
+    transform: translateY(0);
+    transition: 0.7s;
+}
+
+.productBox:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.addBtn {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    font-size: 17px;
+    color: white;
+}
+
+.addBtn:hover {
+    color: red;
+}

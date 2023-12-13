@@ -1,0 +1,125 @@
+.cartModal {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: rgb(45, 44, 44);
+    width: 650px;
+    height: 400px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    color: white;
+}
+
+
+.closeBtn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+    outline: none;
+    font-size: 30px;
+    background-color: transparent;
+    color: rgb(130, 130, 130);
+}
+
+.closeBtn:hover {
+    color: red;
+}
+
+.cartModal th,
+td {
+    width: 150px;
+    text-align: center;
+}
+
+
+.productCartDetail,
+.cartHeader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 10px;
+}
+
+
+.productCartQuantity {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.productCartQuantity button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: white;
+}
+
+.productCartQuantity button:hover {
+    background-color: #ddd;
+    border-radius: 50%;
+    color: black;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cartTotal {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 10px 70px;
+    width: 100%;
+    margin-top: 20px;
+    gap: 10px
+}
+
+.cartConfirmPay {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px;
+    gap: 20px;
+}
+
+.cartConfirmPay Button {
+    width: 150px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background-color: rgb(99, 95, 95);
+    color: white;
+}
+
+.purchaseBtn:hover {
+    background-color: rgb(54, 54, 235);
+}
+
+.cancelBtn:hover {
+    background-color: rgb(247, 120, 120);
+}
+
+.modalBox {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.confirmModal {
+    display: none;
+}
