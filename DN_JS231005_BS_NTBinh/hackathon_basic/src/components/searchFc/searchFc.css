@@ -1,0 +1,16 @@
+.searchFc {
+    background-color: #ddd;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 99%;
+    margin-top: 20px;
+}
+
+.searchInput {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+}

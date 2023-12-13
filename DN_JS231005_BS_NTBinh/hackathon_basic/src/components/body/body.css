@@ -1,0 +1,46 @@
+.body {
+    padding-top: 20px;
+    display: flex;
+    gap: 20px;
+    flex-flow: row wrap;
+}
+
+.reviewBox {
+    padding: 20px;
+    background-color: rgb(193, 249, 187);
+    width: 300px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.reviewBottom {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    width: 100%;
+}
+
+.reviewBottom button {
+    border: none;
+    outline: none;
+    color: rgb(32, 114, 244);
+    background-color: transparent;
+}
+
+.reviewBottom button:hover {
+    color: red;
+}
+
+#reviewText {
+    border: none;
+    background-color: transparent;
+    outline: none;
+    resize: none;
+}
+
+.displayNone {
+    display: none;
+}
