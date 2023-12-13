@@ -1,8 +1,10 @@
+/* eslint-disable no-restricted-globals */
 import React, { useState } from "react";
 import "./cart.css";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
 import { productsList } from "../product/product";
+import { FaRegTrashAlt } from "react-icons/fa";
 interface Product {
   name: string;
   price: number;
@@ -24,7 +26,27 @@ const ShoppingCart: React.FC = () => {
   const reduceQuantity = (index: number) => {
     const updatedProducts = [...products];
     if (updatedProducts[index].quantity > 0) {
-      updatedProducts[index].quantity--;
+      if (updatedProducts[index].quantity === 1) {
+        removeProduct(index);
+      } else {
+        updatedProducts[index].quantity--;
+        setProducts(updatedProducts);
+      }
+    }
+  };
+  const removeProduct = (index: number) => {
+    let popUp: string = "Are you sure to remove this product ?";
+    if (confirm(popUp)) {
+      const updatedProducts = [...products];
+      updatedProducts[index].quantity = 0;
+      setProducts(updatedProducts);
+    }
+  };
+  const confirmPay = () => {
+    let popUp: string = "Do you want to purchase ?";
+    if (confirm(popUp)) {
+      let updatedProducts = [...products];
+      updatedProducts = [];
       setProducts(updatedProducts);
     }
   };
@@ -45,7 +67,7 @@ const ShoppingCart: React.FC = () => {
           <tr className="cartHeader">
             <th>Name</th>
             <th>Quantity</th>
-            <th>Price</th>
+            <th>Price for 1</th>
             <th>Total price</th>
           </tr>
           {products.map((product, index) =>
@@ -61,8 +83,16 @@ const ShoppingCart: React.FC = () => {
                     <FaChevronRight />
                   </button>
                 </td>
-                <td> ${product.price}</td>
-                <td>${product.price * product.quantity}</td>
+                <td>$ {product.price}</td>
+                <td className="priceTotal">
+                  $ {product.price * product.quantity}
+                </td>
+                <button
+                  className="deleteProduct"
+                  onClick={() => removeProduct(index)}
+                >
+                  <FaRegTrashAlt />
+                </button>
               </tr>
             ) : (
               []
@@ -74,7 +104,9 @@ const ShoppingCart: React.FC = () => {
           <p>${totalAmount}</p>
         </div>
         <div className="cartConfirmPay">
-          <button className="purchaseBtn">Purchase</button>
+          <button className="purchaseBtn" onClick={() => confirmPay()}>
+            Purchase
+          </button>
           <button className="cancelBtn">Cancel</button>
         </div>
       </div>
